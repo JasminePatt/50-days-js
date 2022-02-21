@@ -14,15 +14,42 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 body {
-
+    background-color: #000;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: 0;
     margin: 0;
-    background-position: center center;
-    background-size: cover;
+}
+
+button {
+    background-color: rgb(148, 196, 36);
+    color: #fff;
+    border: 1px rgb(54, 99, 3) solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+button .circle{
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale .5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
 }
