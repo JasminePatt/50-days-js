@@ -12,7 +12,7 @@ ratingsContainer.addEventListener('click', (e) => {
     } else if(
         e.target.parentNode.classList.contains('rating') &&
         e.target.previousSibling &&
-        e.target.previousElementSibling.nodeName === 'IMG';
+        e.target.previousElementSibling.nodeName === 'IMG'
     ) {
         removeActive()
         e.target.parentNode.classList.add('active');
